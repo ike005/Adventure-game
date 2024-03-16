@@ -98,10 +98,7 @@ class Character(object):
               """)
             if dmgNum > enemy.armor:
                 dealtDmg = dmgNum - enemy.armor
-                if enemy.hitPoints - dealtDmg >= 0:
-                    enemy.hitPoints -= dmgNum
-                else:
-                    enemy.hitPoints = 0
+                enemy.hitPoints -= dealtDmg
         else:
             print(f"{self.name} missed")
     
@@ -142,5 +139,5 @@ def main():
 
 
 
-
-main()
+if __name__ == "__main__":
+    main()
